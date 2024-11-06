@@ -1,16 +1,15 @@
 {
-    "version": 2,
     "builds": [
       {
-        "src": "my-app/package.json",
+        "src": "package.json",
         "use": "@vercel/static-build",
-        "config": { "distDir": "my-app/dist" }
+        "config": {
+          "distDir": "dist"
+        }
       }
     ],
     "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "my-app/$1"
-      }
+      { "src": "/(.*)", "dest": "/index.html" }
     ]
   }
+  
