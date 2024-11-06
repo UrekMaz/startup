@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
       {
-        "src": "my-app/vite.config.js",
+        "src": "my-app/package.json",
         "use": "@vercel/static-build",
         "config": { "distDir": "my-app/dist" }
       }
@@ -12,6 +12,5 @@
         "src": "/(.*)",
         "dest": "my-app/$1"
       }
-    ],
-    "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+    ]
   }
